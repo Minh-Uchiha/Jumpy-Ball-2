@@ -1,0 +1,302 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+body {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: hidden;
+}
+
+.score {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+}
+
+.score span {
+  letter-spacing: 5px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.score p {
+  letter-spacing: 5px;
+  color: white;
+  display: inline;
+  font-size: 1.5rem;
+}
+
+canvas {
+  position: fixed;
+  z-index: -1;
+}
+
+.score_panel {
+  width: 500px;
+  height: 300px;
+  position: relative;
+  background-color: transparent;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border: 3px solid #57e8eb;
+  -webkit-box-shadow: 0 0 1rem 0.4em rgba(87, 232, 235, 0.5), inset 0 0 1rem 0.4em rgba(87, 232, 235, 0.5);
+          box-shadow: 0 0 1rem 0.4em rgba(87, 232, 235, 0.5), inset 0 0 1rem 0.4em rgba(87, 232, 235, 0.5);
+}
+
+.score_panel .points h1,
+.score_panel .points h2 {
+  text-align: center;
+  color: #7aebff;
+}
+
+.score_panel .points h2 {
+  font-size: 3rem;
+}
+
+.score_panel .start {
+  cursor: pointer;
+  font-size: 1.3rem;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 0.3em 2em;
+  border: 0.15em solid #7aebff;
+  color: #7aebff;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.score_panel .start:hover {
+  -webkit-box-shadow: 0 0 0.5rem 0.3rem #7aebff, inset 0 0 0.5rem 0.3rem #7aebff;
+          box-shadow: 0 0 0.5rem 0.3rem #7aebff, inset 0 0 0.5rem 0.3rem #7aebff;
+}
+
+.manual {
+  position: absolute;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.manual.settings {
+  position: absolute;
+  -webkit-transform: translateY(100vh);
+          transform: translateY(100vh);
+  opacity: 0;
+}
+
+.manual .red,
+.manual .blue,
+.manual .yellow {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 100px auto 0;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.manual .red:hover,
+.manual .blue:hover,
+.manual .yellow:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.manual .red {
+  background-color: #e02424;
+}
+
+.manual .blue {
+  background-color: #225dbd;
+}
+
+.manual .yellow {
+  background-color: #abf00c;
+}
+
+.manual button {
+  font-size: 2rem;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 2px solid #7aebff;
+  background-color: transparent;
+  color: #7aebff;
+  -webkit-box-shadow: inset 0 0 0.5rem 0.2rem #7aebff, 0 0 0.5rem 0.2rem #7aebff;
+          box-shadow: inset 0 0 0.5rem 0.2rem #7aebff, 0 0 0.5rem 0.2rem #7aebff;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.manual button:hover {
+  -webkit-box-shadow: inset 0 0 0.5rem 0.4rem #7aebff, 0 0 0.5rem 0.4rem #7aebff;
+          box-shadow: inset 0 0 0.5rem 0.4rem #7aebff, 0 0 0.5rem 0.4rem #7aebff;
+}
+
+.manual header {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.manual header h1,
+.manual header h3,
+.manual header p {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Source Code Pro", monospace;
+}
+
+.manual header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.manual header h3 {
+  font-size: 1.6rem;
+}
+
+.manual header .instructions {
+  margin-top: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+.manual header .instructions img {
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.manual header .instructions .pillar {
+  width: 100%;
+  background-color: transparent;
+  text-align: center;
+}
+
+.manual header .instructions .pillar div:nth-child(1) {
+  width: 30px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 0 auto 20px;
+}
+
+.manual header .instructions .pillar div:nth-child(2) {
+  width: 30px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 0 auto;
+}
+
+.manual header .instructions .coin,
+.manual header .instructions .growPill,
+.manual header .instructions .penetratePill {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.manual header .instructions .coin {
+  background-color: #f0d332;
+}
+
+.manual header .instructions .growPill {
+  background-color: #27c434;
+}
+
+.manual header .instructions .penetratePill {
+  background-color: #2adbe8;
+}
+
+.manual header .instructions ul {
+  padding: 30px;
+}
+
+.manual header .instructions ul li {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px auto;
+      grid-template-columns: 100px auto;
+  grid-gap: 50px;
+  list-style-type: none;
+  margin: 20px 0;
+}
+
+.menu {
+  position: absolute;
+  top: 0px;
+  left: 220px;
+  height: 70px;
+  line-height: 100px;
+}
+
+.menu i {
+  color: white;
+  font-size: 30px;
+  margin-right: 30px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.menu i.settings:hover {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.menu i.home:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.copyright {
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 3;
+  position: absolute;
+  top: 100vh;
+}
+
+.copyright h2 {
+  color: #7aebff;
+}
+/*# sourceMappingURL=main.css.map */

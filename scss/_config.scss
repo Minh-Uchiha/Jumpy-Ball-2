@@ -1,0 +1,25 @@
+$panel_color: transparent;
+$panel_text: rgb(122, 235, 255);
+$manual_background: rgba(0, 0, 0, 0.85);
+$manual_text_color: rgba(255, 255, 255, 0.9);
+$pillar-collor: rgba(255, 255, 255, 0.9);
+$coin_color: #f0d332;
+$grow_pill_color: #27c434;
+$penetrate_pill_color: rgba(42, 219, 232, 1);
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+body {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}

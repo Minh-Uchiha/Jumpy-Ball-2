@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;600&family=Space+Grotesk:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./js/main.js" type="module" defer></script>
+    <title>Jumpy Ball</title>
+  </head>
+  <body>
+    <div class="score">
+      <span>Score: </span>
+      <p>0</p>
+    </div>
+    <div class="menu">
+      <i class="fas fa-home home"></i>
+      <i class="fas fa-cog settings"></i>
+    </div>
+    <canvas></canvas>
+    <div class="score_panel">
+      <div class="points">
+        <h1>Your Score</h1>
+        <h2>0</h2>
+      </div>
+      <a class="start">Start</a>
+    </div>
+
+    <div class="manual">
+      <header>
+        <h1>Welcome</h1>
+        <h3>Instructions</h3>
+        <div class="instructions">
+          <ul>
+            <li>
+              <img src="./img/up-arrow_buttons.png" alt="Image not available" />
+              <p>
+                Click the Up Arrow Button on your computer to make the ball jump
+              </p>
+            </li>
+            <li>
+              <div class="pillar">
+                <div></div>
+                <div></div>
+              </div>
+              <p>Passing a pillar give you 10 points</p>
+            </li>
+            <li>
+              <div class="coin"></div>
+              <p>Eat a coin to gain 20 points</p>
+            </li>
+            <li>
+              <div class="growPill"></div>
+              <p>A grow pill. Eat it will make you grow bigger</p>
+            </li>
+            <li>
+              <div class="penetratePill"></div>
+              <p>
+                A power pill. It grants you the ability to go through pillars
+              </p>
+            </li>
+          </ul>
+        </div>
+        <button>PLAY NOW</button>
+      </header>
+    </div>
+
+    <div class="manual settings">
+      <header>
+        <h3>Choose the color of the ball</h3>
+        <div class="blue"></div>
+        <div class="red"></div>
+        <div class="yellow"></div>
+      </header>
+    </div>
+
+    <div class="copyright">
+      <h2>A product created by Minh Uchiha</h2>
+    </div>
+
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/31d86dd404.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
