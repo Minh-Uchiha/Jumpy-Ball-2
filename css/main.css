@@ -106,6 +106,7 @@ canvas {
 }
 
 .manual.settings {
+  height: 100vh;
   position: absolute;
   -webkit-transform: translateY(100vh);
           transform: translateY(100vh);
